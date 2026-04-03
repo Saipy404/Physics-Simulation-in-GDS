@@ -12,3 +12,7 @@ Dynamic Body - Orange Circle
 Force Field - Small Blue Circle
 
 I'm sorry for a little amount of functions but for now this is all I can.
+
+Here's the link for .EXE file on Google Drive - https://drive.google.com/drive/u/1/folders/18nfaWY1n9sjbPPeRmiX-guC7YYPWxjQ-
+
+Thanks For Looking!
