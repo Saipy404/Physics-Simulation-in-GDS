@@ -16,3 +16,5 @@ I'm sorry for a little amount of functions but for now this is all I can.
 Here's the link for .EXE file on Google Drive - https://drive.google.com/drive/u/1/folders/18nfaWY1n9sjbPPeRmiX-guC7YYPWxjQ-
 
 Thanks For Looking!
+
+<img width="3292" height="3292" alt="8_2024-07-25T16_53_21 989Z_2bb7356d-47af-4e0c-aa1a-00e2001c6765" src="https://github.com/user-attachments/assets/ea21a2ba-6841-4418-9fea-c5dc2382d3f4" />
