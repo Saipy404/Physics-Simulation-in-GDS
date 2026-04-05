@@ -1,5 +1,7 @@
 Hi! This is my first public programing project and there is diffenetly going to be a lot of bugs (through I didn't find any of bugs).
 I liked this project so I shared this with people and I want to give you instructions about how to use it.
+Also there is a gravity parameter which works but I didn't add an option to control it in UI.
+To control gravity you have to open project.godot in Godot then find a Global Settings node and control gravity there (X-axis works badly but I'll fix that)
 
 Instructions:
 W/Arrow Up - Move up
@@ -17,4 +19,3 @@ Here's the link for .EXE file on Google Drive - https://drive.google.com/drive/u
 
 Thanks For Looking!
 
-<img width="3292" height="3292" alt="8_2024-07-25T16_53_21 989Z_2bb7356d-47af-4e0c-aa1a-00e2001c6765" src="https://github.com/user-attachments/assets/ea21a2ba-6841-4418-9fea-c5dc2382d3f4" />
