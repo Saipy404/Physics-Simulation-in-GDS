@@ -28,7 +28,7 @@ Added another circle
 
 Dynamic Body1 - Light Blue Circle
 
-Here's the link for .EXE file on Google Drive - https://drive.google.com/drive/u/1/folders/18nfaWY1n9sjbPPeRmiX-guC7YYPWxjQ- (1.0)
+Here's the link for .EXE file on Google Drive - https://drive.google.com/drive/u/1/folders/18nfaWY1n9sjbPPeRmiX-guC7YYPWxjQ- (1.1)
 
 ![2026-04-13 10_35_04-My Physics Engine (DEBUG)](https://github.com/user-attachments/assets/52760f8e-6ab1-4136-81a4-111d1acc8b62)
 
