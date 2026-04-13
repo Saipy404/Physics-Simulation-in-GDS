@@ -4,7 +4,7 @@ extends Node2D
 @export var color: Color = Color.ORANGE_RED
 @export var mass: float = 1.0
 @export var friction: float = 0.995
-@export var bounciness: float = 1.0
+@export var bounciness: float = 0.75
 @export var velocity = Vector2(-5, -5)
 @export var force: float = 10.0
 
@@ -13,21 +13,30 @@ extends Node2D
 @onready var wr = $"../Wall right".position.x
 @onready var wu = $"../Ceiling".position.y
 @onready var forceF = $"../Force"
+@onready var circle1 = $"../Circle1"
 
-var grv
-var mmass
-var forceDir
+@onready var pushPower = $"../Push Power"
+
+var grv = Vector2(0, 0)
+var v2mass
 
 func _ready() -> void:
-	grv = -(gs.gravity)
-	mmass = Vector2(0, mass)
+	v2mass = Vector2(mass, mass)
 	queue_redraw()
 
 func _draw() -> void:
 	draw_circle(Vector2.ZERO, radius, color)
 
+func _process(delta: float):
+	if pushPower.text == "":
+		force = force
+	else:
+		force = float(pushPower.text)
+	grv = -(gs.gravity)
+
 func _physics_process(delta: float):
-	velocity += (grv + mmass) * delta
+	velocity += (grv * v2mass) * delta
+	
 	if position.y >= -radius:
 		position.y = -radius
 		velocity.y = -velocity.y * bounciness
@@ -47,10 +56,14 @@ func _physics_process(delta: float):
 		velocity.x = -velocity.x * bounciness
 	if wu + radius >= position.y:
 		position.y = radius + wu
-		velocity.y = -velocity.y * bounciness 
-	
-	forceDir = (self.global_position - forceF.global_position).normalized()
-	velocity += forceDir * forceF.force * delta
+		velocity.y = -velocity.y * bounciness
+		
+	if self.global_position.distance_to(circle1.global_position) < (radius + circle1.radius):
+		position += (self.global_position - circle1.global_position).normalized() * ((radius + circle1.radius - self.global_position.distance_to(circle1.global_position)) / 2)
+		velocity = velocity + ((self.global_position - circle1.global_position) * bounciness).normalized()
+			
+	var force_direction: Vector2 = (self.global_position - forceF.global_position).normalized()
+	velocity += force_direction * forceF.force * delta
 	
 	velocity = velocity * friction
 	position += velocity
